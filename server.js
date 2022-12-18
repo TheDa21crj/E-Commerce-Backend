@@ -22,7 +22,7 @@ app.use(express.json({ extended: false }));
 
 app.use(cookieParser());
 
-app.get("/", (res, res) => {
+app.get("/", (req, res) => {
   res.status(202).send("Hello World");
 });
 
