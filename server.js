@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 const express = require("express");
+const connectDB = require("./config/db");
+const cookieParser = require("cookie-parser");
+const path = require("path");
 
 const app = express();
 
@@ -12,12 +15,27 @@ app.use(function (req, res, next) {
   next();
 });
 
+connectDB();
+
 // init middleware
 app.use(express.json({ extended: false }));
 
-app.get("/", (req, res) => {
+app.use(cookieParser());
+
+app.get("/", (res, res) => {
   res.status(202).send("Hello World");
 });
+
+app.use("/api", require("./routes/User"));
+app.use("/api/Order", require("./routes/Order"));
+app.use("/api/Wishlist", require("./routes/WishList"));
+app.use("/api/Shoping", require("./routes/Shopping"));
+app.use("/api/RegAdmin", require("./routes/RegAdmin"));
+app.use("/api/admin/login", require("./routes/Admin"));
+app.use("/api/admin/Products", require("./routes/Products"));
+app.use("/api/admin/", require("./routes/AdminPost"));
+app.use("/api/Address/", require("./routes/Address"));
+app.use("/api/Stripe/", require("./routes/stripe"));
 
 const port = process.env.PORT || 5000;
 

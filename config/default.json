@@ -1,0 +1,8 @@
+{
+  "mongoURL": "mongodb+srv://Rishav:rishav@e-commerce.pmv1p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtTokenAuth": "myserettoken",
+  "GoogleClientID": "1041876207389-5pdpbui6r4dm58llv4ii8tumjdsan29j.apps.googleusercontent.com",
+  "GoogleClientSecret": "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",
+  "Stripe": "sk_test_51Lgt4qSHqT580lQoNjbMWQgcwIZ5Pl2zh9b3oqhW445R6tNof71oWGKwykSSg1YKM9xEG5cFHsXxgv6rcUSYCU1Q00PurK7HR1",
+  "ClientURl": "http://localhost:3000"
+}
