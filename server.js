@@ -2,18 +2,9 @@ const mongoose = require("mongoose");
 const express = require("express");
 const connectDB = require("./config/db");
 const cookieParser = require("cookie-parser");
-const path = require("path");
+const cors = require("cors");
 
 const app = express();
-
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
 
 connectDB();
 
@@ -21,6 +12,18 @@ connectDB();
 app.use(express.json({ extended: false }));
 
 app.use(cookieParser());
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
+// app.use(cors());
 
 app.get("/", (req, res) => {
   res.status(202).send("Hello World");
