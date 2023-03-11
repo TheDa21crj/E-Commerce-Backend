@@ -44,3 +44,7 @@ The API provides the following endpoints:
 The API uses JSON Web Token for authentication and `bcrypt.js` for password hashing. `express-validator` is used for input validation. `gravatar` is used for generating globally unique avatars for user profiles. Stripe is used for secure payment processing.
 
 Thank you for using our e-commerce backend repository. If you have any questions or issues, please feel free to open an issue or pull request.
+
+## Author
+
+- [@TheDa21crj](https://github.com/TheDa21crj)
