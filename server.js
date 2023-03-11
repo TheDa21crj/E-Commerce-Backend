@@ -15,7 +15,10 @@ app.use(cookieParser());
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:5173");
-  res.header("Access-Control-Allow-Origin", "https://e-commerce-frontend-9md6.onrender.com");
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://e-commerce-frontend-nu.vercel.app"
+  );
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",
