@@ -27,8 +27,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-// app.use(cors());
-
 app.get("/", (req, res) => {
   res.status(202).send("Hello World");
 });
