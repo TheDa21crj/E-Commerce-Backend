@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const express = require("express");
 const connectDB = require("./config/db");
 const cookieParser = require("cookie-parser");
-const cors = require("cors");
 
 const app = express();
 
